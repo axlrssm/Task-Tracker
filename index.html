@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-wrapper">
+    <div class="task-container">
+        <h1>Task Tracker</h1>
+        <button onclick="openTrashModal()" class="trash-icon">🗑️ </button>
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Enter a new task" required>
+        
+        <select id="prioritySelect">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <select id="taskType" onchange="toggleDateTime()">
+            <option value="anytime">Anytime</option>
+            <option value="scheduled">Set Date & Time</option>
+        </select>
+
+        <input type="datetime-local" id="taskDateTime" style="display: none;">
+        
+
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="task-list" id="taskList">
+        <!-- Tasks will be displayed here -->
+    </div>
+
+    <!-- Modal for Recently Finished Tasks -->
+    <div id="trashModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTrashModal()">&times;</span>
+            <h2>Recently Finished Tasks (Auto-deletes after 7 days)</h2>
+            <div id="trashContent">
+                <!-- Trash items will be displayed here -->
+            </div>
+        </div>
+        </div>
+    </div>

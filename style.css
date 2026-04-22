@@ -1,0 +1,189 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+/* Main container */
+.main-wrapper {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 750px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.task-container h1 {
+    font-size: 24px;
+}
+
+/* Trash button */
+.trash-icon {
+    background: #c52b2b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.trash-icon:hover {
+    background: #923232;
+}
+
+/* Input section */
+.input-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.input-group input,
+.input-group select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#taskInput {
+    flex: 1;
+}
+
+/* Add button */
+.input-group button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background: #41a346;
+}
+
+/* Task list */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Task item */
+.task-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #ffffff;
+    border-left: 6px solid #ccc;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: 0.15s ease;
+}
+
+/* Priority colors */
+.task-item.priority-low {
+    border-left-color: #4CAF50;
+}
+
+.task-item.priority-medium {
+    border-left-color: #ff9800;
+}
+
+.task-item.priority-high {
+    border-left-color: #f44336;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Finish button */
+.task-item button {
+    margin-top: 8px;
+    padding: 6px 10px;
+    border: none;
+    background: #1e8ee9;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.task-item button:hover {
+    background: #0b7dda;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Modal content */
+.modal-content {
+    background: white;
+    font-size: 12px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal heading */
+.modal-content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Close button */
+.close {
+    font-size: 22px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* Trash content */
+#trashContent {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+/* Trash item */
+.trash-item {
+    padding: 10px;
+    border-radius: 8px;
+    background: #ffe6e6;
+}
